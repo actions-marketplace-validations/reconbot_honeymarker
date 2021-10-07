@@ -19,4 +19,4 @@ function create_marker() {
 }
 
 install_binary
-create_markers
+create_marker
