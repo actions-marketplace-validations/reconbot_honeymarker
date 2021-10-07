@@ -16,6 +16,8 @@ RUN set -eux; \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
+RUN go get github.com/honeycombio/honeymarker
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

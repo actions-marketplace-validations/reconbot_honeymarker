@@ -18,7 +18,7 @@ This GitHub Action adds a marker from your deploy workflows using [Honeycomb's m
 Put the action in the beginning of your worflow:
 
 ```yaml
-- uses: reconbot/honeymarker
+- uses: reconbot/honeymarker@v2
   with:
     # Required: Honeycomb API key - needed to send markers.
     apikey: ${{ secrets.BUILDEVENTS_APIKEY }}
