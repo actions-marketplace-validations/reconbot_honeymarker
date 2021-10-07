@@ -17,4 +17,4 @@ jobs:
         uses: ./
         with:
           apikey: ${{ secrets.BUILDEVENTS_APIKEY }}
-          dataset: builds
+          dataset: honeymarker-test

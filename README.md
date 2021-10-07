@@ -18,13 +18,13 @@ This GitHub Action adds a marker from your deploy workflows using [Honeycomb's m
 Put the action in the beginning of your worflow:
 
 ```yaml
-- uses: naiduarvind/gha-honeymarker@main
+- uses: reconbot/honeymarker@main
   with:
     # Required: Honeycomb API key - needed to send markers.
     apikey: ${{ secrets.BUILDEVENTS_APIKEY }}
 
     # Required: The Honeycomb dataset to use.
-    dataset: gha-honeymarker
+    dataset: honeymarker
 
     # Optional: The identifier for the marker.
     type: ${{ github.workflow }}
