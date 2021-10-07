@@ -1,4 +1,4 @@
-name: honeymarker-integration
+name: honeymarker-integration-action
 on:
   push:
   schedule:

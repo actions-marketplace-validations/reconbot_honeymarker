@@ -1,4 +1,4 @@
-name: Honeycomb Honeymarker
+name: Honeycomb Honeymarker Action
 author: Francis Gulotta
 description: Add Honeycomb Markers to your GitHub Actions workflows.
 

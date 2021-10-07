@@ -1,10 +1,10 @@
-# `honeymarker` Action
+# Honeycomb `honeymarker` Honeymarker Action
 
 ![release](/assets/honeymarker.gif)
 
 This GitHub Action adds a marker from your deploy workflows using [Honeycomb's marker tool][honeymarker]. It annotates the timeline with a marker and optional metadata from the workflow and will always send a marker for the deploy, even if the deploy failed.
 
-`honeymarker` should be added after a deploy indicating a successful change or otherwise. Every job will create a separate marker.
+`reconbot/honeymarker` should be added after a deploy indicating a successful change or otherwise. Every job will create a separate marker.
 
 ⚠️ Limitations:
 
@@ -18,7 +18,7 @@ This GitHub Action adds a marker from your deploy workflows using [Honeycomb's m
 Put the action in the beginning of your worflow:
 
 ```yaml
-- uses: reconbot/honeymarker@main
+- uses: reconbot/honeymarker
   with:
     # Required: Honeycomb API key - needed to send markers.
     apikey: ${{ secrets.BUILDEVENTS_APIKEY }}
