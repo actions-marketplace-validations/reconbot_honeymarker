@@ -1,10 +1,10 @@
-# `gha-honeymarker` Action
+# `honeymarker` Action
 
 ![release](/assets/honeymarker.gif)
 
 This GitHub Action adds a marker from your deploy workflows using [Honeycomb's marker tool][honeymarker]. It annotates the timeline with a marker and optional metadata from the workflow and will always send a marker for the deploy, even if the deploy failed.
 
-`gha-honeymarker` should be added after a deploy indicating a successful change or otherwise. Every job will create a separate marker.
+`honeymarker` should be added after a deploy indicating a successful change or otherwise. Every job will create a separate marker.
 
 ⚠️ Limitations:
 
@@ -30,7 +30,10 @@ Put the action in the beginning of your worflow:
     type: ${{ github.workflow }}
 
     # Optional: The message describing the marker.
-    message: ${{ github.run-id }}-${{ job.status }} 
+    message: ${{ github.run-id }}-${{ job.status }}
+
+    # optional
+    url: https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
 
 
   # 'honeymarker add' should be placed after a deploy to indicate a change is successful or otherwise.
@@ -40,10 +43,11 @@ Put the action in the beginning of your worflow:
 
 Name         | Required | Description                                                       | Type   | Default
 -------------|----------|-------------------------------------------------------------------|--------|--------
-`apikey`     | yes      | API key used to communicate with the Honeycomb API.               | string | 
+`apikey`     | yes      | API key used to communicate with the Honeycomb API.               | string |
 `dataset`    | yes      | Honeycomb dataset to use.                                         | string |
 `type`       | no       | Identifier for the marker (default = "workflow name").            | string | ${{ github.workflow }}
-`message`    | no       | The message describing the marker (default = "job id-job status").| string | ${{ github.run-id}}-${{ job.status }} 
+`message`    | no       | The message describing the marker (default = "job id-job status").| string | ${{ github.run-id}}-${{ job.status }}
+`url`        | no       | The url of the marker points to                                   | string | https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
 
 ### Outputs
 

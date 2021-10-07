@@ -5,9 +5,9 @@ LABEL "com.github.actions.description"="Add Honeycomb Markers to your GitHub Act
 LABEL "com.github.actions.color"="yellow"
 LABEL "com.github.actions.icon"="activity"
 
-LABEL "repository"="https://github.com/naiduarvind/gha-honeymarker"
-LABEL "homepage"="https://github.com/naiduarvind"
-LABEL "maintainer"="Arvind Naidu <no-reply@thebility.engineer>"
+LABEL "repository"="https://github.com/reconbot/gha-honeymarker"
+LABEL "homepage"="https://github.com/reconbot"
+LABEL "maintainer"="Francis Gulotta <wizard@roborooter.com>"
 
 COPY entrypoint.sh /entrypoint.sh
 

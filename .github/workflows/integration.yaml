@@ -1,4 +1,4 @@
-name: gha-honeymarker-integration
+name: honeymarker-integration
 on:
   push:
   schedule:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   integration:
-    name: gha-honeymarker-integration
+    name: honeymarker-integration
     runs-on: ubuntu-latest
 
     steps:

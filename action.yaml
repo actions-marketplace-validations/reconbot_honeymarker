@@ -1,5 +1,5 @@
 name: Honeycomb Honeymarker
-author: Arvind Naidu
+author: Francis Gulotta
 description: Add Honeycomb Markers to your GitHub Actions workflows.
 
 branding:
